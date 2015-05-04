@@ -1,3 +1,4 @@
+'use strict';
 
 angular.module('Tool')
 .factory('svgViewBox', [
@@ -7,7 +8,7 @@ function () {
     this._cb = cb;
 
     if (!option) {
-      option = {}
+      option = {};
     }
     this.step = option.step || 0.1;
     this.max = option.max || 3.1;
@@ -120,5 +121,5 @@ function () {
     create: function (node, option, cb) {
       return new SVGViewBox(node, option, cb);
     }
-  }
+  };
 }]);
